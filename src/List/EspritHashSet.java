@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class EspritHashSet implements GestionEnseignant{
-    Set<Enseignant> enseignantHashSet = new HashSet<>();
+    Set<Enseignant> enseignantHashSet = new HashSet<Enseignant>();
     Iterator<Enseignant> i = enseignantHashSet.iterator();
 
     @Override
@@ -37,7 +37,7 @@ public class EspritHashSet implements GestionEnseignant{
     public void displayEnseignants() {
         for (Object ens:enseignantHashSet
              ) {
-            System.out.println(ens);
+            System.out.println("||"+ens);
         }
     }
 }

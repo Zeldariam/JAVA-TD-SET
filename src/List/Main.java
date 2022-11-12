@@ -9,33 +9,42 @@ public class Main {
         System.out.println(e1.equals(e2));
         System.out.println(e1);
 //>>>>> HASHSET >>>>>
+        System.out.println(" #### HASHSET ####");
         EspritHashSet hSet = new EspritHashSet();
+        hSet.ajouterEnseignant(e2);
         hSet.ajouterEnseignant(e3);
         hSet.ajouterEnseignant(e1);
-        hSet.ajouterEnseignant(e2);
 
         //Afficher tous les ENS de hSet
-        System.out.print(" \nHashSet initial print\n");
+        System.out.print(" \nHashSet print\n");
         hSet.displayEnseignants();
 
         //Rechercher si obj ENS existe dans hSet
-        System.out.println(hSet.rechercherEnseignant(e3));
+        System.out.println("Recherche enseignant e3 : "+hSet.rechercherEnseignant(e3));
         //Rechercher si  ENS existe dans hSet  BY ID
-        System.out.println(hSet.rechercherEnseignant(4));
+        System.out.println("Recherche enseignant avec id 4 : "+hSet.rechercherEnseignant(4));
+        /*
+            //Supression
+            hSet.supprimerEnseignant(e1);
+         */
+
 //>>>>> TREESET >>>>>
-        
-/*
-        //UNSORTED LIST
-        System.out.println("\nUNSORTED LIST :");
-        ar.printList();
-        //tri par ID
-        System.out.println("\nSorted by ID : ");
-        ar.trierEtudiantsParId();
-        ar.printList();
-        //tri par NOM
-        System.out.println("\nSorted by NAME : ");
-        ar.trierEtudiantsParNom();
-        ar.printList();
-        */
+        System.out.println(" #### TREESET ####");
+        EspritTreeSet tSet = new EspritTreeSet();
+        //Insertion
+        tSet.ajouterEnseignant(e3);
+        tSet.ajouterEnseignant(e1);
+        tSet.ajouterEnseignant(e2);
+        //Affichage du tSET
+        System.out.println("TreeSet print");
+        tSet.displayEnseignants();
+        //Rechercher si obj ENS existe dans tSet
+        System.out.println("Recherche enseignant e3 : "+tSet.rechercherEnseignant(e3));
+        //Rechercher si  ENS existe dans tSet  BY ID
+        System.out.println("Recherche enseignant avec id 4 : "+tSet.rechercherEnseignant(4));
+        /*
+            //Supression
+            tSet.supprimerEnseignant(e1);
+         */
     }
 }

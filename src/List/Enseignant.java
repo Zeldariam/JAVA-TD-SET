@@ -2,7 +2,7 @@ package List;
 
 import java.util.Objects;
 
-public class Enseignant {
+public class Enseignant implements Comparable<Enseignant>{
 //ATTRIBUTES
     private int id;
     private String nom;
@@ -61,5 +61,13 @@ public class Enseignant {
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Enseignant o) {
+        if (id!=o.getId()) {
+            return 1;
+        }
+        return 0;
     }
 }
