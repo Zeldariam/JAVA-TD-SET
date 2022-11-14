@@ -5,8 +5,12 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class EspritHashSet implements GestionEnseignant{
-    Set<Enseignant> enseignantHashSet = new HashSet<Enseignant>();
-    Iterator<Enseignant> i = enseignantHashSet.iterator();
+    Set<Enseignant> enseignantHashSet;
+
+
+    public EspritHashSet() {
+        this.enseignantHashSet = enseignantHashSet;
+    }
 
     @Override
     public void ajouterEnseignant(Enseignant e) {
@@ -27,7 +31,19 @@ public class EspritHashSet implements GestionEnseignant{
         }
         return false;
     }
-
+ /*
+     //V2 of rechercherEnseignant
+     @Override
+     public boolean rechercherEnseignant(int id) {
+         Iterator<Enseignant> i = enseignantHashSet.iterator();
+         while (i.hasNext()){
+             if (i.next().getId() == id){
+                 return true;
+             }
+         }
+         return false;
+     }
+ */
     @Override
     public void supprimerEnseignant(Enseignant e) {
         enseignantHashSet.remove(e);

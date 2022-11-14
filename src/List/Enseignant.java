@@ -42,6 +42,10 @@ public class Enseignant implements Comparable<Enseignant>{
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -49,10 +53,6 @@ public class Enseignant implements Comparable<Enseignant>{
         return id == that.id;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 
     @Override
     public String toString() {

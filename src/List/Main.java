@@ -1,5 +1,9 @@
 package List;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -46,5 +50,7 @@ public class Main {
             //Supression
             tSet.supprimerEnseignant(e1);
          */
+
+        //Set<Map.Entry<String, Enseignant>> mm = myMap.entrySet();
     }
 }
